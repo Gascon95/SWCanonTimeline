@@ -9,6 +9,105 @@
 	font-family: "Ubuntu";
 }
 
+body, html { width: 100vw; }
+
+
+/******************************************************************************************
+***************                         SECTION HEAD                        ***************
+*******************************************************************************************/
+
+section.head {
+	width: 100vw;
+	height: 80px;
+	background-color: #f4f2f2;
+}
+
+.menu {
+	height: 80px;
+	width: 260px;
+	float: left;
+}
+
+h1.title {
+	width: calc( 100vw - 520px );
+	height: 80px;
+	float: left;
+	text-align: center;
+	line-height: 80px;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #666;
+}
+
+.social {
+	width: 260px;
+	height: 80px;
+	float: right;
+}
+
+/******************************************************************************************
+***************                        SECTION CONTENT                      ***************
+*******************************************************************************************/
+
+.stripe {
+	width: 100vw;
+	max-height: 100px;
+	text-align: center;
+	border: 10px solid transparent;
+	cursor: pointer;
+	padding-bottom: 50px;
+	overflow: hidden;
+	-webkit-transition: .5s max-height ease-in-out;
+	transition: .5s max-height ease-in-out;
+}
+
+.stripe.open { max-height: 1000px; }
+
+.stripe[data-eventType="book"] { background-color: #F4D03F; }
+
+.stripe[data-eventType="comic"] { background-color: #E67E22; }
+
+.stripe[data-eventType="movie"] { background-color: #D64541; }
+
+.stripe[data-eventType="tv"] { background-color: #C0392B; }
+
+.stripe[data-eventType="game"] { background-color: #674172; }
+
+.stripe:hover { border-color: #f4f2f2; }
+
+.stripe.open:hover { border-color: transparent; }
+
+.stripeTitle {
+	font-size: 4em;
+	color: white;
+	line-height: 160px;
+	text-transform: uppercase;
+}
+
+
+
+.content {
+	width: calc( 100vw - 100px );
+	background-color: #f4f2f2;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 50px;
+	box-sizing: border-box;
+}
+
+.content p {
+	color: #666;
+	font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
 
 
 
