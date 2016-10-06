@@ -13,6 +13,21 @@
 
 body, html { width: 100vw; }
 
+a {
+	text-decoration: none;
+	border: 1px solid #f4f2f2;
+	padding: 10px 20px;
+	color: #f4f2f2;
+	font-size: .8em;
+	text-transform: uppercase;
+}
+
+a:hover {
+	border: 1px solid #F4D03F;
+	background-color: #F4D03F;
+	color: #666;
+}
+
 
 /******************************************************************************************
 ***************                         SECTION HEAD                        ***************
@@ -20,8 +35,23 @@ body, html { width: 100vw; }
 
 section.head {
 	width: 100vw;
-	height: 100px;
+	height:100vh;
 	background-color: #f4f2f2;
+	background: url(../images/bg1.jpg) no-repeat center center;
+	background-size: cover;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 .menu {
@@ -31,20 +61,33 @@ section.head {
 }
 
 h1.title {
-	width: calc( 100vw - 520px );
-	height: 80px;
-	float: left;
-	text-align: center;
-	line-height: 100px;
 	text-transform: uppercase;
+	color: #f4f2f2;
+	font-size: 3em;
+	text-shadow: 3px 3px 8px rgba(0,0,0,.4);
+}
+
+h4.subtitle {
+	width: 53vw;
+	color: #f4f2f2;
 	font-weight: 300;
-	color: #666;
+	text-align: center;
+	line-height: 1.8em;
+	margin: 10vh auto;
 }
 
 .social {
 	width: 260px;
 	height: 80px;
 	float: right;
+}
+
+.downArrow {
+	height: 20px;
+	opacity: .5;
+	position: absolute;
+	bottom: 40px;
+	left: calc( 50vw - 20px );
 }
 
 /******************************************************************************************
