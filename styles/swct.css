@@ -7,6 +7,8 @@
 	margin: 0;
 	padding: 0;
 	font-family: "Ubuntu";
+	color: #666;
+	box-sizing: border-box;
 }
 
 body, html { width: 100vw; }
@@ -18,7 +20,7 @@ body, html { width: 100vw; }
 
 section.head {
 	width: 100vw;
-	height: 80px;
+	height: 100px;
 	background-color: #f4f2f2;
 }
 
@@ -33,7 +35,7 @@ h1.title {
 	height: 80px;
 	float: left;
 	text-align: center;
-	line-height: 80px;
+	line-height: 100px;
 	text-transform: uppercase;
 	font-weight: 300;
 	color: #666;
@@ -51,17 +53,15 @@ h1.title {
 
 .stripe {
 	width: 100vw;
-	max-height: 100px;
 	text-align: center;
 	border: 10px solid transparent;
 	cursor: pointer;
-	padding-bottom: 50px;
 	overflow: hidden;
 	-webkit-transition: .5s max-height ease-in-out;
 	transition: .5s max-height ease-in-out;
 }
 
-.stripe.open { max-height: 1000px; }
+.stripe.open { max-height: 2000px; }
 
 .stripe[data-eventType="book"] { background-color: #F4D03F; }
 
@@ -75,41 +75,133 @@ h1.title {
 
 .stripe:hover { border-color: #f4f2f2; }
 
-.stripe.open:hover { border-color: transparent; }
+.stripe.open:hover {
+	border-color: transparent;
+	cursor: default;
+}
 
 .stripeTitle {
-	font-size: 4em;
+	font-size: 3em;
 	color: white;
 	line-height: 160px;
 	text-transform: uppercase;
 }
 
-
-
 .content {
 	width: calc( 100vw - 100px );
 	background-color: #f4f2f2;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 	overflow: hidden;
-	padding: 50px;
+	padding: 50px 200px 60px;
 	box-sizing: border-box;
+	display: none;
 }
 
 .content p {
 	color: #666;
 	font-weight: 300;
+	text-align: justify;
+
 }
 
 
+/******************************************************************************************
+***************                         EVENT CONTENT                       ***************
+*******************************************************************************************/
 
 
 
+.eventIcon { height: 60px; }
+
+.eventType {
+	margin: 20px auto 50px;
+	font-size: 1.25em;
+}
+
+.stripe[data-eventType="movie"] .eventType { color: #D64541; }
+
+.stripe[data-eventType="tv"] .eventType { color: #C0392B; }
+
+.stripe[data-eventType="book"] .eventType { color: #F4D03F; }
+
+.stripe[data-eventType="comic"] .eventType { color: #E67E22; }
+
+.stripe[data-eventType="game"] .eventType { color: #674172; }
+
+.eventTitle {
+	text-transform: uppercase;
+	margin-bottom: 50px;
+	font-size: 1.5em;
+}
+
+.eventContent {
+	line-height: 1.8em;
+	margin-bottom: 50px;
+}
+
+.eventContent span {
+	font-weight: 700;
+}
 
 
+.eventLink {
+	padding: 10px 20px;
+	box-sizing: border-box;
+	font-size: .7em;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 1px solid;
+}
 
+.stripe[data-eventType="movie"] .eventLink {
+	border-color: #D64541;
+	color: #D64541;
+}
 
+.stripe[data-eventType="movie"] .eventLink:hover {
+	background-color: #D64541;
+	color: #f4f2f2;
+}
 
+.stripe[data-eventType="tv"] .eventLink {
+	border-color: #C0392B;
+	color: #C0392B;
+}
 
+.stripe[data-eventType="tv"] .eventLink:hover {
+	background-color: #C0392B;
+	color: #f4f2f2;
+}
+
+.stripe[data-eventType="book"] .eventLink {
+	border-color: #F4D03F;
+	color: #F4D03F;
+}
+
+.stripe[data-eventType="book"] .eventLink:hover {
+	background-color: #F4D03F;
+	color: #f4f2f2;
+}
+
+.stripe[data-eventType="comic"] .eventLink {
+	border-color: #E67E22;
+	color: #E67E22;
+}
+
+.stripe[data-eventType="comic"] .eventLink:hover {
+	background-color: #E67E22;
+	color: #f4f2f2;
+}
+
+.stripe[data-eventType="game"] .eventLink {
+	border-color: #674172;
+	color: #674172;
+}
+
+.stripe[data-eventType="game"] .eventLink:hover {
+	background-color: #674172;
+	color: #f4f2f2;
+}
 
 
 

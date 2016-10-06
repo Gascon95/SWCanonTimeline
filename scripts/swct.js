@@ -1,32 +1,15 @@
 // DOCUMENT READY FUNCTION
 $(document).ready(function () {
 	
-	// CLICK ON STRIPE
+	// on tab click
 	$(".stripe").on("click", function() {
+	
+		// close all open tabs
+		$(this).siblings().children(".content").slideUp();
 		
-		closeStripe();
-		
-		openStripe( $(this) );
-		
+		// open just clicked tab
+		$(this).children(".content").slideToggle();
+	
 	});
 	
-	
 }); // end of document.ready
-
-
-// CLOSE OPEN STRIPE
-function closeStripe() {
-	
-	$(".open").removeClass("open");
-	
-}
-
-
-// OPEN CLICKED STRIPE
-function openStripe(stripe) {
-	
-	stripe.addClass("open");
-	
-}
-
-
