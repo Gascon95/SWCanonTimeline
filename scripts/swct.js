@@ -6,9 +6,11 @@ $(document).ready(function () {
 	
 		// close all open tabs
 		$(this).siblings().children(".content").slideUp();
+		$(".open").removeClass("open");
 		
 		// open just clicked tab
-		$(this).children(".content").slideToggle();
+		$(this).children(".content").slideToggle().addClass("open");
+		$(this).addClass("open");
 	
 	});
 	

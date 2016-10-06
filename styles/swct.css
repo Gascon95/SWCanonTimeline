@@ -104,8 +104,6 @@ h4.subtitle {
 	transition: .5s max-height ease-in-out;
 }
 
-.stripe.open { max-height: 2000px; }
-
 .stripe[data-eventType="book"] { background-color: #F4D03F; }
 
 .stripe[data-eventType="comic"] { background-color: #E67E22; }
@@ -174,7 +172,7 @@ h4.subtitle {
 .eventTitle {
 	text-transform: uppercase;
 	margin-bottom: 50px;
-	font-size: 1.5em;
+	font-size: 2.5em;
 }
 
 .eventContent {
